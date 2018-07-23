@@ -1,14 +1,23 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar color="primary">
+        <ion-title>
+            Principal
+        </ion-title>
+        <button ion-button icon-only menuToggle float-left>
+          <ion-icon name="menu" class="animated  jackInTheBox"></ion-icon>
+        </button>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="card-background-page">
+
+    <ion-card>
+        <img src="assets/imgs/libreria.png" />
+        <div class="card-title">C.T.P DIGITAL</div>
+        <div class="card-subtitle">!!! Todo lo que necesitas para el cole !!!</div>
+    </ion-card>
+    <ion-buttons>
+        <button ion-button color="secondary" float-left class="animated infinite pulse" (click)="irPagina()">Mas Info</button>
+        <button ion-button color="secondary" menuToggle float-right class="animated infinite pulse">Ir al menu</button>
+    </ion-buttons>
 </ion-content>

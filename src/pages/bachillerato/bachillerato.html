@@ -1,0 +1,38 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Bachillerato</ion-title>
+        <button ion-button icon-only menuToggle float-left>
+          <ion-icon name="menu" class="animated  jackInTheBox"></ion-icon>
+        </button>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page">
+    <ion-card (click)="irPagina('español',lista)">
+        <img src="assets/imgs/bachillerato/español.jpg" />
+        <div class="card-title">Español</div>
+    </ion-card>
+    <ion-card (click)="irPagina('biologia',lista)">
+        <img src="assets/imgs/bachillerato/biolo.jpg" />
+        <div class="card-title">Biologia</div>
+    </ion-card>
+    <ion-card (click)="irPagina('civica',lista)">
+        <img src="assets/imgs/bachillerato/civica.jpg" />
+        <div class="card-title">Civica</div>
+    </ion-card>
+    <ion-card (click)="irPagina('sociales',lista)">
+        <img src="assets/imgs/bachillerato/sociales.jpg" />
+        <div class="card-title">Est. Sociales</div>
+    </ion-card>
+    <ion-card (click)="irPagina('ingles',lista)">
+        <img src="assets/imgs/bachillerato/ingles.jpg" />
+        <div class="card-title">Ingles</div>
+    </ion-card>
+    <ion-card (click)="irPagina('mate',lista)">
+        <img src="assets/imgs/bachillerato/mate.jpg" />
+        <div class="card-title">Matemáticas</div>
+    </ion-card>
+</ion-content>

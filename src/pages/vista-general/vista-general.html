@@ -1,0 +1,25 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title class="mayuscula">{{titulo}}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-card *ngFor="let materia of materias_pdf; let i = index">
+        <img src="assets/imgs/pdf.png" />
+        <ion-card-content>
+            <ion-card-title class="mayuscula">
+                {{ materia.nombre }}
+            </ion-card-title>
+            <ion-buttons>
+                <button ion-button color="twitter" class="animated infinite pulse" (click)="abrirPDF(i)">
+              Ver en PDF
+            </button>
+
+            </ion-buttons>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

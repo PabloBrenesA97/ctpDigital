@@ -1,0 +1,35 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title text-center>Libros</ion-title>
+        <ion-buttons>
+            <button ion-button icon-only menuToggle float-left>
+          <ion-icon name="menu" class="animated  jackInTheBox"></ion-icon>
+        </button>
+            <button ion-button icon-only float-right (click)="abrirBusqueda(busqueda)">
+          <ion-icon name="search" class="animated  jackInTheBox"></ion-icon>
+        </button>
+        </ion-buttons>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-searchbar *ngIf="busqueda" (ionInput)="obtenerLibros($event)" class="animated  fadeIn"></ion-searchbar>
+    <ion-card *ngFor="let libro of libros; let i = index">
+        <img float-left class="mediana" [src]=libro.img/>
+        <ion-card-content>
+            <ion-card-title>
+                {{ libro.nombre }}
+            </ion-card-title>
+            <br>
+            <ion-buttons>
+                <button float-right ion-button color="twitter" class="animated infinite pulse" (click)="abrirPDF(i)">
+              Ver en PDF
+            </button>
+            </ion-buttons>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
